@@ -122,8 +122,8 @@ void Game::draw() {
 
     gameStateMachine->draw(); // draw new graphics in dependency of previously calculated physics
 
-    //glFinish(); // waiting to finish drawing
-    glFlush(); // NOT waiting to finish drawing
+    glFinish(); // waiting to finish drawing
+    //glFlush(); // NOT waiting to finish drawing
     SDL_GL_SwapWindow(window);
 }
 

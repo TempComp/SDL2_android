@@ -3,6 +3,7 @@
 #include <mutex>
 #include <iostream>
 #include "SDL.h"
+#include "Button.h"
 
 std::mutex g_mtx;
 
@@ -46,6 +47,24 @@ guard lock(const std::string& name)
 void process(const document& doc)
 {
     auto l = lock(doc.getUrl()); //locked
+
+    Button* button1 = new Button;
+    button1->init(1050, 70, 0.9, 400, 200, "test1.png");
+
+    Button* button2 = new Button;
+    button2->init(1050, 70, 0.9, 400, 200, "test2.png");
+
+    Button* button3 = new Button;
+    button3->init(1050, 70, 0.9, 400, 200, "test3.png");
+
+    Button* button4 = new Button;
+    button4->init(1050, 70, 0.9, 400, 200, "test4.png");
+
+    delete button1;
+    delete button2;
+    delete button3;
+    delete button4;
+
     SDL_Log ("event");
     std::this_thread::sleep_for(std::chrono::seconds(3));	//procced
 } // unlocking

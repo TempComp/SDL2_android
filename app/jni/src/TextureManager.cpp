@@ -45,6 +45,7 @@ bool TextureManager::load_PNG(std::string imagePath, const char* imageID, int* w
 
     glBindTexture(GL_TEXTURE_2D, 0);
 
+    SDL_FreeSurface(surface);
     textureMap[imageID] = glTextureID; // add in map
 
     return true;

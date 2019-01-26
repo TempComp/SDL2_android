@@ -12,7 +12,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/../sqlite/
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/../freetype/include/
 
 #Application source files here:
-LOCAL_SRC_FILES :=             main.cpp    \
+LOCAL_SRC_FILES := main.cpp    \
             Game.cpp    \
             EventHandler.cpp    \
             PlayState.cpp   \
