@@ -1,1 +1,4 @@
-# SDL2_android
+# The Game 
+SDL2 libs.
+Android NDK.
+C++.
